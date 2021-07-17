@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css')}}">
+</head>
+<body>
+  <h1>Graficas de CPK Terminales</h1>
+  <table class="table table-striped table-bordered bg-black table-sm">
+    <thead class="text-md-center bg-dark text-white" >
+      <tr>
+          <td>TERMINAL</td>
+          <td>CPK</td>        
+      </tr>
+      <tbody>
+        {% for item in range(0,tam) %}
+          <tr class="text-md-center">
+            <td>{{tables.loc[item]['terminal']}} </td>
+            <td>{{tables.loc[item]['cpk']}} </td>      
+          </tr> 
+        {% endfor %}
+      </tbody>
+  </table>
+</body>
+</html>
