@@ -5,6 +5,7 @@ Created on Sun Jul 11 20:54:09 2021
 
 @author: gian
 """
+#%%
 import csv
 import psycopg2
 import pandas as pd
@@ -16,7 +17,7 @@ import plotly.express as px
 import  numpy as np
 
 def conectar():
-    ip= 'localhost'
+    ip= '192.168.0.59'
     conn = psycopg2.connect(database="corte", user = "lear", password = "1234", host = ip, port = "5432")
     cur = conn.cursor()
     return cur, conn
@@ -158,3 +159,4 @@ def crear_grafica():
     tabla.sort_values(by=['muestras'], inplace=True, ascending=False)
     tabla.reset_index(drop=True, inplace=True)    
     return graf, tabla
+# %%

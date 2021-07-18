@@ -1,5 +1,6 @@
 create  database corte;
 
+select * from cable c ;
 
  corte;
 
@@ -7,9 +8,9 @@ CREATE TABLE public.altura
 (
     id serial,
     maquina character(4) NOT NULL,
-    tipo character(30) NOT NULL,
-    cable character(20) NOT NULL,
-    terminal character(20) NOT NULL,
+    tipo varchar(30) NOT NULL,
+    cable varchar(20) NOT NULL,
+    terminal varchar(20) NOT NULL,
     altura double precision NOT NULL,
     fecha date NOT null,
     PRIMARY KEY (id)
